@@ -1,0 +1,87 @@
+<RCC>
+    <qresource prefix="/buttons">
+        <file>assets/Buttons/FertilizerToolButton.png</file>
+        <file>assets/Buttons/InsecticideToolButton.png</file>
+        <file>assets/Buttons/MisterToolButton.png</file>
+        <file>assets/Buttons/RepotToolButton.png</file>
+        <file>assets/Buttons/WateringToolButton.png</file>
+        <file>assets/Buttons/pause.png</file>
+        <file>assets/Buttons/play.png</file>
+        <file>assets/Buttons/FertilizerMouseIcon.png</file>
+        <file>assets/Buttons/insecticideMouseIcon.png</file>
+        <file>assets/Buttons/MisterMouseIcon.png</file>
+        <file>assets/Buttons/RepotMouseIcon.png</file>
+        <file>assets/Buttons/watering-canMouseIcon.png</file>
+    </qresource>
+    <qresource prefix="/SnakePlant">
+        <file>assets/SnakePlant/SnakePlant.png</file>
+        <file>assets/SnakePlant/SnakePlantPotCombo.png</file>
+        <file>assets/SnakePlant/SnakePlantBugs.png</file>
+        <file>assets/SnakePlant/SnakePlantBugsWilted.png</file>
+        <file>assets/SnakePlant/SnakePlantDead.png</file>
+        <file>assets/SnakePlant/SnakePlantPot.png</file>
+        <file>assets/SnakePlant/SnakePlantPotRootRot.png</file>
+        <file>assets/SnakePlant/SnakePlantWilted.png</file>
+        <file>assets/SnakePlant/SnakePlantWiltedYellow.png</file>
+        <file>assets/SnakePlant/SnakePlantYellow.png</file>
+    </qresource>
+    <qresource prefix="/Pothos">
+        <file>assets/Pothos/Pothos.png</file>
+        <file>assets/Pothos/PothosPotCombo.png</file>
+        <file>assets/Pothos/PothosBugs.png</file>
+        <file>assets/Pothos/PothosBugsWilted.png</file>
+        <file>assets/Pothos/PothosDead.png</file>
+        <file>assets/Pothos/PothosPot.png</file>
+        <file>assets/Pothos/PothosPotRootRot.png</file>
+        <file>assets/Pothos/PothosWilted.png</file>
+        <file>assets/Pothos/PothosWiltedYellow.png</file>
+        <file>assets/Pothos/PothosYellow.png</file>
+    </qresource>
+    <qresource prefix="/Poinsettia">
+        <file>assets/Poinsettia/Poinsettia.png</file>
+        <file>assets/Poinsettia/PoinsettiaPotCombo.png</file>
+        <file>assets/Poinsettia/PoinsettiaBugs.png</file>
+        <file>assets/Poinsettia/PoinsettiaBugsWilted.png</file>
+        <file>assets/Poinsettia/PoinsettiaDead.png</file>
+        <file>assets/Poinsettia/PoinsettiaPot.png</file>
+        <file>assets/Poinsettia/PoinsettiaPotRootRot.png</file>
+        <file>assets/Poinsettia/PoinsettiaWilted.png</file>
+        <file>assets/Poinsettia/PoinsettiaWiltedYellow.png</file>
+        <file>assets/Poinsettia/PoinsettiaWinter.png</file>
+        <file>assets/Poinsettia/PoinsettiaWinterWilted.png</file>
+        <file>assets/Poinsettia/PoinsettiaYellow.png</file>
+    </qresource>
+    <qresource prefix="/SunIndicator">
+        <file>assets/0sun.png</file>
+        <file>assets/25sun.png</file>
+        <file>assets/50sun.png</file>
+        <file>assets/75sun.png</file>
+        <file>assets/100sun.png</file>
+    </qresource>
+    <qresource prefix="/SeasonIndicator">
+        <file>assets/winter.png</file>
+        <file>assets/spring.png</file>
+        <file>assets/summer.png</file>
+        <file>assets/fall.png</file>
+    </qresource>
+    <qresource prefix="/StringOfPearls">
+        <file>assets/StringOfPearls/StringOfPearls.png</file>
+        <file>assets/StringOfPearls/StringOfPearlsBugs.png</file>
+        <file>assets/StringOfPearls/StringOfPearlsBugsWilted.png</file>
+        <file>assets/StringOfPearls/StringOfPearlsDead.png</file>
+        <file>assets/StringOfPearls/StringOfPearlsPot.png</file>
+        <file>assets/StringOfPearls/StringOfPearlsPotCombo.png</file>
+        <file>assets/StringOfPearls/StringOfPearlsPotRootRot.png</file>
+        <file>assets/StringOfPearls/StringOfPearlsWilted.png</file>
+        <file>assets/StringOfPearls/StringOfPearlsWiltedYellow.png</file>
+        <file>assets/StringOfPearls/StringOfPearlsYellow.png</file>
+    </qresource>
+
+    <qresource prefix="/Animation">
+    <file>assets/waterdrop.png</file>
+    <file>assets/mist.png</file>
+    <file>assets/insecticide.png</file>
+    <file>assets/fertilizer.png</file>
+    </qresource>
+    
+</RCC>

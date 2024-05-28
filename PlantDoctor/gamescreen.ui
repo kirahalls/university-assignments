@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GameScreen</class>
+ <widget class="QMainWindow" name="GameScreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>789</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Academy Engraved LET</family>
+    <pointsize>14</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Plant Doctor</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(211, 211, 211);
+margin: 0.2px;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="plantPic">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>110</y>
+      <width>441</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="waterButton">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>180</y>
+      <width>91</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fertilizeButton">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>280</y>
+      <width>91</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="mistButton">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>370</y>
+      <width>91</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="insecticideButton">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>460</y>
+      <width>91</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="repotButton">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>550</y>
+      <width>91</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="snakePlantInfo">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>211</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>9</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(210, 180, 140);
+color: rgb(54, 69, 79);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Snake Plant&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;---------------------------------&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Snake plants thrive on neglect, they &lt;/p&gt;&lt;p align=&quot;center&quot;&gt;respond best to little watering and &lt;/p&gt;&lt;p align=&quot;center&quot;&gt;being left alone.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Watering: 🚰&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Spring - Fall: Every 2 weeks (14 days)&lt;/p&gt;&lt;p&gt;Winter: Every 4 weeks (28 days)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Light&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;: 🌞&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Will survive in any light condition&lt;/p&gt;&lt;p&gt;except for full shade.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Misting&lt;/span&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;: 💨&lt;/span&gt;&lt;/p&gt;&lt;p&gt;No misting, they like to be dry.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Repot: 🪴&lt;/span&gt;&lt;/p&gt;&lt;p&gt;When the plant gets too big,&lt;/p&gt;&lt;p&gt;or root rot.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Fertilizer: ✨&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Spring-Summer: &lt;/p&gt;&lt;p&gt;Once every 4 weeks.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="toggleDiseaseCard">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>10</y>
+      <width>81</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Futura</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(138, 154, 91);
+color: rgb(229, 228, 226);
+border: 4px solid rgb(128, 128, 0);
+border-top-left-radius :20px;
+ border-top-right-radius : 20px; 
+ border-bottom-left-radius : 20px; 
+ border-bottom-right-radius : 20px;</string>
+    </property>
+    <property name="text">
+     <string>Plant 
+Diseases</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="timeDisplay">
+    <property name="geometry">
+     <rect>
+      <x>640</x>
+      <y>10</y>
+      <width>121</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Futura</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(138, 154, 91);
+color: rgb(229, 228, 226);
+border: 4px solid rgb(128, 128, 0);
+border-top-left-radius :20px;
+ border-top-right-radius : 20px; 
+ border-bottom-left-radius : 20px; 
+ border-bottom-right-radius : 20px;</string>
+    </property>
+    <property name="text">
+     <string>TIME:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="pothosInfo">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>211</width>
+      <height>581</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Futura</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(210, 180, 140);
+color: rgb(54, 69, 79);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Pothos&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;---------------------------------&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Pothos is everybody's favorite &lt;/p&gt;&lt;p align=&quot;center&quot;&gt;house plant. They grow lovely vines &lt;/p&gt;&lt;p align=&quot;center&quot;&gt;and are super low maintenance.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Watering: 🚰&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Every 2 weeks (14 days)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Light: 🌞&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Partial Sun - Partial Shade.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Misting: 💨&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Winter: Every 2 weeks (14 days)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Repot: 🪴&lt;/span&gt;&lt;/p&gt;&lt;p&gt;When the plant gets too big,&lt;/p&gt;&lt;p&gt;or root rot.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Fertilizer: ✨&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Spring-Summer: &lt;/p&gt;&lt;p&gt;Once every 4 weeks.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="poinsettiaInfo">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>80</y>
+      <width>211</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(210, 180, 140);
+color: rgb(54, 69, 79);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Poinsettia&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;---------------------------------&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;The perfect plant for the holidays,&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;with it's beautiful red leaves.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Watering: 🚰&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Once a week (7 days)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Light: 🌞&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Partial Shade - Full Sun&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Misting: 💨&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Winter: Every 2 days&lt;/p&gt;&lt;p&gt;Spring - Fall: Once a week (7 days)&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Repot: 🪴&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Once a year during spring or &lt;/p&gt;&lt;p&gt;summer, or if there is root rot. &lt;/p&gt;&lt;p&gt;Water thoroughly after repotting.&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Fertilizer: ✨&lt;/span&gt;&lt;/p&gt;&lt;p&gt;Spring-Summer: &lt;/p&gt;&lt;p&gt;Once every 3-4 weeks.&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="stringOfPearlsInfo">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>201</width>
+      <height>721</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Futura</family>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(210, 180, 140);
+color: rgb(54, 69, 79);</string>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;String Of Pearls&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;---------------------------------&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;While beautiful, String Of Pearls&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;are one of the more picky plants!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Watering: 🚰&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Spring - Fall:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Every 2 weeks (14 days)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Winter:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Every 4 weeks (28 days)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;DO NOT overwater!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Light: 🌞&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Spring - Fall:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Half sun - Partial Shade&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Winter:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Full Sun&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Misting: 💨&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;No misting, they like to be dry.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt; font-weight:700;&quot;&gt;Repot: 🪴&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Once the plant outgrows the pot.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Fertilizer: ✨&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Spring-Summer: &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Only fertilize if you skipped&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;a watering cycle.&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;Winter:&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;No fertilizing, they go dormant!&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QSlider" name="sunSlider">
+    <property name="geometry">
+     <rect>
+      <x>340</x>
+      <y>20</y>
+      <width>181</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="singleStep">
+     <number>1</number>
+    </property>
+    <property name="pageStep">
+     <number>10</number>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <property name="tickPosition">
+     <enum>QSlider::TicksAbove</enum>
+    </property>
+    <property name="tickInterval">
+     <number>25</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="sunIndicator">
+    <property name="geometry">
+     <rect>
+      <x>560</x>
+      <y>10</y>
+      <width>58</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="seasonIndicator">
+    <property name="geometry">
+     <rect>
+      <x>687</x>
+      <y>80</y>
+      <width>71</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pauseButton">
+    <property name="geometry">
+     <rect>
+      <x>770</x>
+      <y>20</y>
+      <width>21</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="PhysicsPane" name="physicsPane" native="true">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>120</y>
+      <width>371</width>
+      <height>351</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="potPic">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>110</y>
+      <width>441</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="bugPic">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>110</y>
+      <width>441</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="homeButton">
+    <property name="geometry">
+     <rect>
+      <x>690</x>
+      <y>630</y>
+      <width>61</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Futura</family>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(138, 154, 91);
+color: rgb(229, 228, 226);
+border: 4px solid rgb(128, 128, 0);
+border-top-left-radius :20px;
+ border-top-right-radius : 20px; 
+ border-bottom-left-radius : 20px; 
+ border-bottom-right-radius : 20px;</string>
+    </property>
+    <property name="text">
+     <string>Home</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="currentStateUpdate">
+    <property name="geometry">
+     <rect>
+      <x>580</x>
+      <y>680</y>
+      <width>181</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Futura</family>
+      <pointsize>8</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(138, 154, 91);
+color: rgb(229, 228, 226);
+border: 4px solid rgb(128, 128, 0);
+</string>
+    </property>
+    <property name="text">
+     <string>Current Problems:</string>
+    </property>
+   </widget>
+   <zorder>waterButton</zorder>
+   <zorder>fertilizeButton</zorder>
+   <zorder>mistButton</zorder>
+   <zorder>insecticideButton</zorder>
+   <zorder>repotButton</zorder>
+   <zorder>toggleDiseaseCard</zorder>
+   <zorder>timeDisplay</zorder>
+   <zorder>sunSlider</zorder>
+   <zorder>sunIndicator</zorder>
+   <zorder>seasonIndicator</zorder>
+   <zorder>pauseButton</zorder>
+   <zorder>potPic</zorder>
+   <zorder>plantPic</zorder>
+   <zorder>bugPic</zorder>
+   <zorder>physicsPane</zorder>
+   <zorder>stringOfPearlsInfo</zorder>
+   <zorder>pothosInfo</zorder>
+   <zorder>poinsettiaInfo</zorder>
+   <zorder>snakePlantInfo</zorder>
+   <zorder>homeButton</zorder>
+   <zorder>currentStateUpdate</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>PhysicsPane</class>
+   <extends>QWidget</extends>
+   <header>physicspane.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
