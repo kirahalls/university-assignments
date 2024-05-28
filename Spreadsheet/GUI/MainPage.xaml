@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="GUI.MainPage">
+
+    <ContentPage.MenuBarItems>
+        <MenuBarItem Text="File">
+            <MenuFlyoutItem Text="New" Clicked="FileMenuNew" />
+            <MenuFlyoutItem Text="Open" Clicked="FileMenuOpenAsync" />
+            <MenuFlyoutItem Text="Save" Clicked="FileMenuSave" />
+            <MenuFlyoutItem Text="Color Scheme" Clicked="FileMenuColorScheme" />
+            <MenuFlyoutItem Text="Help" Clicked="FileMenuHelp" />
+        </MenuBarItem>
+    </ContentPage.MenuBarItems>
+
+    
+    <ScrollView>
+
+        <VerticalStackLayout x:Name="Entire">
+
+            <!-- A Place to put the currently selected cell "named" and "value" -->
+            <Border
+            StrokeThickness="2"
+            HeightRequest="40">
+                <HorizontalStackLayout>
+                    <Label x:Name="selectedCell" Text="" WidthRequest="100"/>
+                    <Entry x:Name="selectedCellContents" Text="" WidthRequest="100" Unfocused="ContentTextChanged" Completed="ContentTextChanged"/>
+                </HorizontalStackLayout>
+            </Border>
+
+            
+            
+
+            <!-- the Grid of Spreadsheet GUI Cells -->
+            <ScrollView
+                    x:Name="Table"
+                    Orientation="Both"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalScrollBarVisibility="Always"
+                    HeightRequest="250">
+                <VerticalStackLayout>
+                    <!-- the column headers: A, B, C, ... -->
+                    <HorizontalStackLayout x:Name="TopLabels" ></HorizontalStackLayout>
+                    <!-- the row headers (1, 2, 3...) and the empty cells -->
+                    <HorizontalStackLayout>
+                        <VerticalStackLayout x:Name="LeftLabels"  ></VerticalStackLayout>
+                        <VerticalStackLayout x:Name="Grid"       Loaded="ActionOnLoaded" ></VerticalStackLayout>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </ScrollView>
+        </VerticalStackLayout>
+    </ScrollView>
+    
+    
+
+</ContentPage>
