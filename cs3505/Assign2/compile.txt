@@ -1,0 +1,1 @@
+g++ -o Sine testSine.cpp Sine.cpp
