@@ -1,0 +1,224 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GUI</name>
+    </assembly>
+    <members>
+        <member name="T:GUI.MainPage">
+             <summary>
+             Author:    Kira Halls and Nandini Goel
+             Partner:   Nandini Goel, Kira Halls (Both worked equally)
+             Date:      March 3, 2023
+             Course:    CS 3500, University of Utah, School of Computing
+             Copyright: CS 3500 and Kira Halls, Nandini Goel - This work may not 
+                        be copied for use in Academic Coursework.
+            
+             We, Kira Halls and Nandini Goel, certify that I wrote this code from scratch and
+             did not copy it in part or whole from another source.  All 
+             references used in the completion of the assignments are cited 
+             in my README file.
+            
+             File Contents
+            
+             This class is responsible for implementing the actual code behind our Spreadsheet GUI. It handles the creation of the spreadsheet grid and the row and column labels, creates the entries for the cells, and all other issues associated with
+             initializing the Main Page of the GUI. It also handles the tasks expected when clicking on a cell, hitting enter after typing in a cell, changing the cell text when a formula is evaluated, resetting the cell text if the cell contents are changed through 
+             an upper widget, etc. This class has an instance variable containing the spreadsheet being used, the currently selected entry, as well as two dictionaries that contain a column name with a list of its associated cell/entry values, and a dictionary
+             that contains cell names as the key and their contents as the value. This class must accomplish all spreadsheet functionality as listed in the spreadsheet class (i.e. storing a cells contents and value as separate variables, evaluating a formula, 
+             alerting the user if a formula is incorrectly formatted, allowing other spreadsheet cells to be used as variables in a formula, etc.). It uses a custom MyEntry class to represent the cells, allowing the user to change the text, select and highlight 
+             a cell, etc. This class is, in general, just a visual representation of what the spreadsheet class can do. 
+             One special feature of this class is the ability to change the color scheme from default to a red, orange, yellow, green, blue, or purple color scheme. This is accomplished through setting 
+             the background colors of the page elements based on the color scheme the user selects. 
+            
+             
+             </summary>
+        </member>
+        <member name="T:GUI.MainPage.ActionOnCompleted">
+            <summary>
+               Definition of what information (method signature) must be sent
+               by the Entry when it is modified.
+            </summary>
+            <param name="col"> col (char) in grid, e.g., A5 </param>
+            <param name="row"> row (int) in grid,  e.g., A5 </param>
+        </member>
+        <member name="M:GUI.MainPage.#ctor">
+            <summary>
+            This method handles the initialization and creation of the content window. It initializes all necessary visual components, the column and row headers with labels, as well as 
+            the grid containing the cells themselves. 
+            </summary>
+        </member>
+        <member name="M:GUI.MainPage.FileMenuNew(System.Object,System.EventArgs)">
+            <summary>
+            This method is responsible for creating a new spreadsheet when the user selects 'File'> 'New'. It must first check that the current spreadsheet was saved, and display a Loss of Data warning message if it has not. 
+            After it ensures that, it creates a new spreadsheet and initializes a new MainPage with  a blank spreadsheet. 
+            
+            </summary>
+            <param name="sender"></param> Part of required parameter for method header of this type
+            <param name="e"></param> Part of required parameter for method header of this type
+        </member>
+        <member name="M:GUI.MainPage.FileMenuOpenAsync(System.Object,System.EventArgs)">
+            <summary>
+            This method is responsible for opening a previously saved spreadsheet when the user selects 'File' > 'Open'. It must first check that the current spreadsheet was saved, and display a Loss of Data warning message if it has not. 
+            After that is ensured, it will ask for a filepath to the spreadsheet the user wants to open. It then creates a new spreadsheet using that saved spreadsheet version and initializes a new MainPage with the opened spreadsheet. 
+            
+            </summary>
+            <param name="sender"></param> Part of required parameter for method header of this type
+            <param name="e"></param> Part of required parameter for method header of this type
+        </member>
+        <member name="M:GUI.MainPage.FileMenuSave(System.Object,System.EventArgs)">
+            <summary>
+            This method handles saving the current spreadsheet. It automatically saves it to the user's desktop using the .sprd extension. 
+            
+            </summary>
+            <param name="sender"></param> Part of required parameter for method header of this type
+            <param name="e"></param> Part of required parameter for method header of this type
+        </member>
+        <member name="M:GUI.MainPage.FileMenuHelp(System.Object,System.EventArgs)">
+            <summary>
+            This method handles displaying help messages when the user selects 'File' > 'Help'. It discusses navigating the spreadsheet, expected cell contents, and the special feature of the spreadsheet.
+            </summary>
+            <param name="sender"></param> Part of the required parameters for method headers of this type
+            <param name="e"></param> Part of the required parameters for method headers of this type
+        </member>
+        <member name="M:GUI.MainPage.FileMenuColorScheme(System.Object,System.EventArgs)">
+             <summary>
+             This method contains the execution of our special feature: changing the spreadsheet color scheme. It allows a user to select from seven color schemes by adding a 'Color Scheme' option to the file dropdown menu
+             and displaying a list of Default, Red, Orange, Yellow, Green, Blue, and Purple color schemes for the user to choose from. It changes the entry colors, the highlighted cell colors, and the row and column header colors.
+            
+             </summary>
+             <param name="sender"></param> Part of the required parameters for method headers of this type
+             <param name="e"></param> Part of the required parameters for method headers of this type
+        </member>
+        <member name="M:GUI.MainPage.InitializeColumnHeaders">
+            <summary>
+            This method handles the creation of the column headers (i.e. "A", "B", etc.). It creates a new border for each letter of the alphabet, adds a label to that border 
+            containing the column name, and adds a blank border as the very first cell so that all row headers are not listed incorrectly under the "A" column.
+            </summary>
+        </member>
+        <member name="M:GUI.MainPage.InitializeRowHeaders">
+            <summary>
+            This method initializes the row headers for the spreadsheet. It adds ten new borders containing labels titling the numbers 1-10 to the left labels of the grid. 
+            Originally, the spreadsheet was meant to contain 99 rows, but due to issues with slow computer processing, it has been reduced to 10 per the assignment requirements.
+            </summary>
+        </member>
+        <member name="M:GUI.MainPage.InitializeGrid">
+            <summary>
+            This method initializes the actual cell grid of the spreadsheet. It creates ten horizontal stack layout objects that represent each 'row' of the grid, and adds twenty six 
+            entries to each row to represent the individual cells. The entries are objects of the MyEntry class as provided by the professors and altered by Nandini and Kira. Additionally, this 
+            method adds each new cell to the Entries dictionary that holds all entries of the spreadsheet for later use.
+            </summary>
+        </member>
+        <member name="M:GUI.MainPage.ActionOnLoaded(System.Object,System.EventArgs)">
+            <summary>
+            This method handles auto-focusing on cell A1 when the spreadsheet is first opened. 
+            </summary>
+            <param name="sender"></param> Part of the required parameters for method headers of this type
+            <param name="e"></param> Part of the required parameters for method headers of this type
+        </member>
+        <member name="M:GUI.MainPage.handleCellChanged(System.String,System.Int32)">
+            <summary>
+              This method will be called by the individual Entry elements when Enter
+              is pressed in them.
+              
+              The idea is to move to the next cell in the list.
+            </summary>
+            <param name="col"> e.g., The 'A' in A5 </param>
+            <param name="row"> e.g., The  5  in A5 </param>
+        </member>
+        <member name="M:GUI.MainPage.CellClicked(GUI.MainPage.MyEntry)">
+            <summary>
+            This method is called when an entry, or 'cell', is clicked. It highlights the cell by changing the background color, sets the instance variable 
+            'selectedEntry' to the entry calling the method, and updates the widget at the top of the spreadsheet to display the entry name followed by the entry value, 
+            and shows the entry's contents in an editable widget just after that. It also sets the text of the cell itself to the contents of the cell as opposed to the value of the cell.
+            </summary>
+            <param name="entry"></param> The entry that was clicked
+        </member>
+        <member name="M:GUI.MainPage.ContentTextChanged(System.Object,System.EventArgs)">
+            <summary>
+            This method is called when a cell becomes unfocused or 'completed' (i.e. when the user presses enter in the cell). It changes the cell to no longer be highlighted and sets the background color to the unhighlighted color, 
+            resets the contents of the cell if the contents are a formula and resets the text of the cell to be the evaluated value of the formula. If the contents are not a formula, it sets the contents to be the text of the cell.
+            </summary>
+            <param name="sender"></param> Part of the required parameters for method headers of this type
+            <param name="e"></param> Part of the required parameters for method headers of this type
+        </member>
+        <member name="T:GUI.MainPage.MyEntry">
+            <summary>
+              Author: H. James de St. Germain, altered by Kira Halls and Nandini Goel
+              Date:   Spring 2023
+              
+              This code shows:
+              1) How to augment a Maui Widget (i.e., Entry) to add more information
+                  a) using StyleId
+                  b) using fields
+              2) How to provide a method that matches an event handler (used to clear all cells)
+              3) How to attach a method to an event handler (i.e., Completed)
+            </summary>
+        </member>
+        <member name="F:GUI.MainPage.MyEntry.onChange">
+            <summary>
+              Function provided by "outside world" to be called whenever
+              this entry is modified
+            </summary>
+        </member>
+        <member name="M:GUI.MainPage.MyEntry.#ctor(System.Int32,System.String,GUI.MainPage.ActionOnCompleted,GUI.MainPage,SS.Spreadsheet)">
+            <summary>
+              build an Entry element with the row "remembered"
+            </summary>
+            <param name="row"> unique identifier for this item </param>
+            <param name="changeAction"> outside action that should be invoked after this cell is modified </param>
+        </member>
+        <member name="M:GUI.MainPage.MyEntry.ClearAndUnfocus">
+            <summary>
+              Remove focus and text from this widget
+            </summary>
+        </member>
+        <member name="M:GUI.MainPage.MyEntry.CellChangedValue(System.Object,System.EventArgs)">
+            <summary>
+              Action to take when the value of this entry widget is changed
+              and the Enter Key pressed.
+            </summary>
+            <param name="sender"> ignored, but should == this </param>
+            <param name="e"> ignored </param>
+        </member>
+        <member name="M:GUI.MainPage.MyEntry.CellFocused(System.Object,System.EventArgs)">
+            <summary>
+            This method is called when the cell is 'focused'. It calls the 'CellClicked' method that handles updating the text, the entry contents, etc.
+            </summary>
+            <param name="sender"></param> Part of the required parameters for method headers of this type
+            <param name="e"></param> Part of the required parameters for method headers of this type
+        </member>
+        <member name="M:GUI.MainPage.MyEntry.CellUnfocused(System.Object,System.EventArgs)">
+            <summary>
+            This method is called when the cell becomes 'unfocused'. If the cell's contents are currently set to the default (i.e. "") then the cell's contents are set to the 
+            text of the cell. If the cell content is not a formula, then the contents are also set to the text of the cell. Otherwise, the cell contents are a formula and the cell text is set to the evaluated 
+            formula value.
+            </summary>
+            <param name="sender"></param> Part of the required parameters for method headers of this type
+            <param name="e"></param> Part of the required parameters for method headers of this type
+        </member>
+        <member name="M:GUI.MainPage.MyEntry.GetName">
+            <summary>
+            This method returns the cell/entry name
+            </summary>
+            <returns></returns> The string that is the cell name ex "A1"
+        </member>
+        <member name="M:GUI.MainPage.MyEntry.GetContents">
+            <summary>
+            This method returns the contents of the cell
+            </summary>
+            <returns></returns> The string that is the cells contents
+        </member>
+        <member name="M:GUI.MainPage.MyEntry.GetValue">
+            <summary>
+            This method returns the value (as opposed to the contents) of the cell
+            </summary>
+            <returns></returns> The string that is the value of the cell
+        </member>
+        <member name="M:GUI.MainPage.MyEntry.SetContents(System.String)">
+            <summary>
+            This method handles setting the contents of the cell. It sets the contents, gets all cells that depend on the current cell and recalculates their value and resets their text, 
+            resets the value of the current cell, and resets the text to be the value of the cell.
+            </summary>
+            <param name="contents"></param> The new contents of the cell
+        </member>
+    </members>
+</doc>
