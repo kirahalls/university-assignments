@@ -172,6 +172,8 @@ unsigned int execute_instruction(unsigned int program_counter, instruction_t* in
   // program_counter is a byte address, but instructions are 4 bytes each
   // divide by 4 to get the index into the instructions array
   instruction_t instr = instructions[program_counter / 4];
+
+  //printf("%u\n", registers[8]);
   
   switch(instr.opcode)
   {
@@ -195,10 +197,10 @@ unsigned int execute_instruction(unsigned int program_counter, instruction_t* in
     break;
   case movl_reg_reg:
   
-    memcpy(registers + instr.second_register, registers + instr.first_register, sizeof(instr.second_register));
+    memcpy(registers + instr.second_register, registers + instr.first_register, sizeof(unsigned int));
     break;
   case movl_deref_reg:
-    //printf("%u\n", memory[registers[instr.first_register]+ instr.immediate]);
+    //printf("%u\n", registers[instr.first_register]+ instr.immediate);
     memcpy(registers + instr.second_register, memory + (registers[instr.first_register] + instr.immediate), sizeof(unsigned int));
     break;
   case movl_reg_deref:
@@ -317,7 +319,7 @@ unsigned int execute_instruction(unsigned int program_counter, instruction_t* in
     }
     break;
   case jmp:
-    memset(memory+registers[8], program_counter + 4, sizeof(unsigned int));
+    //memset(memory+registers[8], program_counter + 4, sizeof(unsigned int));
     program_counter += instr.immediate + 4;
     return program_counter;
     break;
@@ -333,7 +335,9 @@ unsigned int execute_instruction(unsigned int program_counter, instruction_t* in
     }
     else 
     {
-      memcpy(&program_counter, memory+registers[8], sizeof(memory[registers[8]]));
+      //printf("%u\n", memory[registers[8]]);
+      program_counter = memory[registers[8]];
+      //memcpy(&program_counter, memory + registers[8], sizeof(memory[registers[8]]));
       registers[8] += 4;
       return program_counter; 
     }
