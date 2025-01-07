@@ -1,0 +1,98 @@
+{% include "header.html" with title="Assignment View" %}
+
+<main>
+    <!-- Heading/Title section -->
+    <section class="Title">
+        <h1> {{assignment.title}} </h1>
+        <p> Due {{assignment.deadline}}, total of {{assignment.points}} 
+            {% if assignment.points == 1 %}
+                point
+            {% else %}
+                points
+            {% endif %}
+             </p> 
+    </section>
+    
+    {% if is_student %}
+        <!-- Files box -->
+        <section>
+            <div>
+                <!-- Submitted graded assignment -->
+                {% if graded %}
+                    <p> Your submission, <a href="{{student_submission.file.url}}"> {{student_submission.file.name}} </a> received 
+                        {{student_submission.score}}/{{assignment.points}} points ({{grade}}%) 
+                    </p>
+
+                <!-- Submitted, ungraded, past due assignment -->
+                {% elif ungraded %}
+                    <p>
+                        Your submission,  <a href="{{student_submission.file.url}}"> {{student_submission.file.name}} </a> is being graded
+                    </p>
+
+                <!-- Submitted early assignment -->
+                {% elif early_submission %}
+                    <p>
+                        Your current submission is <a href="{{student_submission.file.url}}"> {{student_submission.file.name}} </a>
+                    </p>
+
+                <!-- Not submitted, not due assignment -->
+                {% elif no_submission %}
+                    <p>
+                        No current submission
+                    </p>
+
+                <!-- Missing assignment -->
+                {% else %}
+                    <p>
+                        You did not submit this assignment and received 0 points
+                    </p>
+                {% endif %}
+
+                <!-- Only show submission form if the assignment isn't due yet  -->
+                {% if not is_due %}
+                    <form class="not-due-assign-form" action="/{{assignment.id}}/" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        
+                        <output> {{error}} </output>
+                        
+                        <label for="file"> Upload submission: </label>
+                        <input type="file" id="file" name="file" accept="application/pdf">
+                        <button type="submit"> Submit </button>
+                    </form>
+                {% endif %}
+            </div>
+        </section>
+    {% endif %}
+
+    {% if is_ta or is_administrator %}
+        <!-- Submissions Box -->
+        <section id="submissions_box">
+            <div> Currently 
+                <!-- If it is a ta, then show current submissions/total assigned submissions -->
+                {% if is_ta %}
+                    {{submissions}}/{{students}} submission{{submissions|pluralize}} 
+                <!-- If it is an administrator, just show total submissions  -->
+                {% else %}
+                    {{submissions}} submission{{submissions|pluralize}}
+                {% endif %}
+
+            </div>
+            <div>
+                <!-- If it is a ta, show the submissions assigned to them, otherwise just show the grading page -->
+                {% if is_ta %}
+                    <div id="submission_text" > 
+                        {{assigned}} submission{{submissions|pluralize}} assigned to you 
+                    </div>
+                {% endif %}
+                <a href ="/{{assignment.id}}/submissions" title="Grading page for Assignment"> Grade </a> 
+            </div>
+        </section>
+    {% endif %}
+
+    <!-- Description Section -->
+    <section>
+        <h2 id="description_header"> Description </h2>
+        <p> {{assignment.description|safe}} </p>
+    </section>
+
+</main>

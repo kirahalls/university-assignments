@@ -1,0 +1,71 @@
+{% include "header.html" with title="TA View - Assignment List" %}
+
+<main>
+    <h1 class="Title"> Your grades </h1>
+    <section id="ta_box">
+        <div> Currently logged in as {{user.get_full_name}}. </div>
+        <a href="/profile/logout/" role="button"> Log out </a>
+    </section>
+
+
+    {% if is_ta or is_admin %}
+    <!-- Assignment and Graded table -->
+    <table class="sortable">
+        <thead>
+            <tr>
+                <th>
+                    Assignment
+                </th>
+                <th class="numbered_column sort-column" role="button">
+                    Graded
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- If it is an admin, assigned is just all the submissions -->
+            {% for assignment, graded, assigned in data %}
+            <!-- Each assignment gets its own row -->
+            <tr data-index="{{forloop.counter}}">
+                <td> <a href="/{{assignment.id}}"> {{assignment.title}} </a> </td>
+
+                <!-- Format information as number of submissions already graded over the total number assigned to this TA -->
+                <td class="numbered_column" data-value="{{graded}}"> {{graded}} / {{assigned}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <!-- Assignment and Graded table -->
+    <table class="sortable hypothesizable">
+        <thead>
+            <tr>
+                <th>
+                    Assignment
+                </th>
+                <th class="numbered_column sort-column" role="button">
+                    Graded
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for assignment, grade in data %}
+            <!-- Each assignment gets its own row -->
+            <tr data-index="{{forloop.counter}}">
+                <td> <a href="/{{assignment.id}}"> {{assignment.title}} </a> </td>
+
+                <!-- Display grade -->
+                <td class="numbered_column" data-value="{{grade}}" data-weight="{{assignment.weight}}"> {{grade}} </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+        <tfoot>
+            <tr>
+                <td> <strong> Final grade </strong></td>
+                <td class="numbered_column"> {{final_grade}}% </td>
+            </tr>
+        </tfoot>
+    </table>
+    {% endif %}
+
+
+</main>

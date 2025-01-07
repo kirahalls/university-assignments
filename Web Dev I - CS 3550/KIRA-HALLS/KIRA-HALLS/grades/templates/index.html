@@ -1,0 +1,32 @@
+{% include "header.html" with title="Assignment List" %}
+
+<main>
+    <h1 class="Title"> All assignments </h1>
+    <table class="sortable">
+        <thead>
+            
+            <tr>
+                <th>
+                    Assignment
+                </th>
+                <th class="sort-column" role="button">
+                    Due date
+                </th>
+                <th class="numbered_column sort-column" role="button">
+                    Weight
+                </th>
+            </tr>
+        </thead>
+
+        {% for assignment in assignments %}
+        <!-- Each assignment gets its own row -->
+        <tr data-index="{{forloop.counter}}">
+            <td> <a href="/{{ assignment.id }}"> {{assignment.title}} </a> </td>
+            <td data-value="{{assignment.deadline|date:'U'}}"> {{assignment.deadline|date:"M d"}} </td>
+            <td class="numbered_column" data-value="{{assignment.weight}}"> {{assignment.weight}} </td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</main>
+

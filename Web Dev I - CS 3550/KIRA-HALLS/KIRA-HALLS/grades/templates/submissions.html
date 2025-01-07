@@ -1,0 +1,52 @@
+{% include "header.html" with title="Assignment Submissions" %}
+
+<main>
+    <section class="Title">
+        <h1 > {{assignment.title}} </h1>
+        <p> 
+            All grades out of {{points}}
+        </p>
+    </section>
+   
+    <form action="/{{assignment.id}}/submissions" method="post">
+        {% csrf_token %}
+            <!-- Grades table --> 
+        <table>
+            <thead>
+                <tr>
+                    <th>
+                        Student
+                    </th>
+                    <th>
+                        Submission
+                    </th>
+                    <th>
+                        Grade
+                    </th>
+                </tr>
+            </thead> 
+            <tbody>
+                {% for submission, student, errors in data %}
+                <!-- Each submission gets its own row -->
+                 <tr>
+                    <td> <label for="{{student}}"> {{student}} </label></td>
+                    <td> <a href="{{submission.file.url}}" title="Assignment submission for {{student}}"> Submission </a></td>
+                    <td> <input type="number" id="{{student}}" min="0" max={{assignment.points}} value="{{submission.score}}" name="grade-{{submission.id}}"> </td>
+                    <td>
+                        {% for error in errors %}
+                            <output for="grade-{{submission.id}}"> {{error}} </output> 
+                        {% endfor %}
+                    </td>
+                    
+                </tr>
+                {% endfor %}
+                
+            </tbody> 
+        </table>
+        <section>
+            <button> Submit </button>
+            <a href="/{{assignment.id}}"> Back to assignment </a>
+        </section>
+    </form>
+
+</main>

@@ -1,0 +1,300 @@
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
+/* PHASE 2 - Set basic rulesfor font and line height*/
+html 
+{
+    font-family: 'IBM Plex Sans', sans-serif;
+    line-height: 1.25; 
+}
+
+/* PHASE 2 - Set font style for code elements */
+code 
+{
+    font-family: 'IBM Plex Mono', sans-serif;
+}
+
+/* PHASE 2 - Set line height */
+table
+{
+    line-height: 1.5;
+}
+
+/* PHASE 2 - Style navigation banner at top of every page */
+header
+{
+    font-size: 125%;
+    font-weight: bold; 
+}
+
+
+
+/* PHASE 2  - Set navigation font weight, color */
+nav a
+{
+    font-weight: normal;
+    color: #444;
+}
+
+/* PHASE 2 - Set page titles to 150% of normal size */
+main h1
+{
+    font-size: 150%;
+}
+
+/* PHASE 2 - Set subtitle font size to be normal size */
+#description_header 
+{
+    font-size: 100%;
+}
+
+/* PHASE 2 - Set fonts on login screen to be 25% larger than normal */
+.login
+{
+    font-size: 125%;
+}
+
+/* PHASE 2 - Set username and password entries to be 25% larger than normal */
+#username, #password 
+{
+    font-size: 125%;
+}
+
+/* PHASE 2 - Adjust font size and width of login button */
+.login button
+{
+    font-size: 125%;
+    width: 50%;
+}
+
+/* PHASE 3 - Make nav banner links have no underline */
+nav a 
+{
+    text-decoration: none;
+}
+
+/* PHASE 3 - When navigation links are hovered over, show the underline */
+nav a:hover 
+{
+    text-decoration: underline;
+}
+
+/* PHASE  3 - Make the login content a flex box */
+.login 
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+/* PHASE 3  - Align div elements on top of each other, and auto set alignment to start of flex box*/
+.login div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: start; 
+}
+
+/* PHASE  3 - Set input to be 50% width and align input boxes to end of flex box */
+#username, #password
+{
+    width: 50%;
+    align-self: flex-end;
+}
+
+/* PHASE 3 - Set flex grow value to 1 so label and input can be separated */
+.login label
+{
+    font-size: 125%;
+    flex-grow: 1;
+}
+
+/* PHASE 3 - Set width of table to fit page */
+table
+{
+    width: 100%;
+}
+
+/* PHASE 3 - Center button in middle of page */
+#login_button
+{  
+    justify-content: center;
+}
+
+/* PHASE 3 - If a column is numbered, make sure its text is aligned to the right */
+.numbered_column 
+{
+    text-align: right;
+}
+
+/* PHASE 3 - Align table headings to the left */
+th
+{
+    text-align: left;
+}
+
+/* PHASE 4 - Set margins and padding to 0*/
+body, html, p, header h1, main h1
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* PHASE 4 - Action boxes */
+#submissions_box, #ta_box
+{
+    background-color: #b1c3de;
+    border-style: solid;
+    border-color: #204a87;
+    padding: 1rem;
+}
+
+/* PHASE 4 - Adding whitespace between elements */
+.Title, .description_header, img
+{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* PHASE 4 - Adding whitespace under the table, not on top to account for additional whitespace already above tables */
+table
+{
+    margin-bottom: 1rem;
+}
+
+/* PHASE 4 - Styling navigation banner background and setting margins */
+header
+{
+    background-color: #ddd;
+    box-shadow: 0 0 5px gray;
+    margin-bottom: 3rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* PHASE 4 - Add margins around main content */
+main
+{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+/* PHASE 4 - Adding horizontal line below title on each page */
+main h1 
+{
+    border-bottom-style: solid;
+    border-bottom-color: #ddd;
+    border-bottom-width: 1px;
+}
+
+/* PHASE 5 - Making navigation banner and main a flex box */
+header, .nav_bar_content, header nav, main
+{
+    display: flex;
+    flex-direction: row;
+}
+
+/* PHASE 5 - Header nav is twice the size of the CS 3550 title */
+header nav 
+{
+    flex-grow: 2;
+}
+
+/* PHASE 5 - Setting flex-grow property for content alignment */
+header #assignments 
+{
+    flex-grow: 1;
+}
+
+/* PHASE 5 - Set profile to be at very end of nav banner */
+header #profile
+{
+    align-self: flex-end;
+}
+
+/* PHASE 5 - 1 rem gap between CS 3550 and Assignments */
+header p
+{
+    margin-right: 1rem;
+}
+
+/* PHASE 5 - Set max width of main content and its flex direction to be columns,  adding padding, and adding box-sizing to account for overflow/calculation issues */
+main
+{
+    max-width: 50rem;
+    flex-direction: column;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* PHASE 5 - Set max width of content of navigation banner */
+.nav_bar_content
+{
+    flex-grow: 2;
+    max-width: 50rem;
+}
+
+/* PHASE 5 - Center navigation banner content, adding padding, and adding box-sizing to account for overflow/calculation issues */
+header
+{
+    justify-content: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* PHASE 5 - Make action boxes flex boxes */
+#submissions_box, #ta_box
+{
+    display: flex;
+    flex-grow: 1;
+}
+
+/* PHASE 5 - Make submissions box direction column */
+#submissions_box 
+{
+    flex-direction: column;
+}
+
+/* PHASE 5 - Make text and associated link their own flex boxes, and make text twice as big as links so link can be justified to the right */
+#submissions_box div, #ta_box div
+{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 2;
+}
+
+/* PHASE 5 - Justify links */
+#submissions_box a, #ta_box a
+{
+    align-self: flex-end;
+}
+
+/* PHASE 5 - Make the body of the main page a flex-box to center items on window */
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* HW4 Phase 3 */
+output {
+    font-weight: bold;
+    color: red;
+}
+
+input:invalid {
+    border: 2px solid red;
+}
+
+ /* HW6 Phase 3 */
+th.sort-column { cursor: pointer; }
+th.sort-asc::after { content: " \25b2"; }
+th.sort-desc::after { content: " \25bc"; }
