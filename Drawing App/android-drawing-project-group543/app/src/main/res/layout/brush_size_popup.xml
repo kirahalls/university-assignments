@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="42dp"
+            android:layout_height="53dp"
+            app:srcCompat="@drawable/small_circle" />
+
+        <SeekBar
+            android:id="@+id/sizeBar"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="274dp"
+            android:layout_height="51dp"
+            android:max="30"
+            android:progress="5"
+            android:progressTint="#000000" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="45dp"
+            android:layout_height="51dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/medium_black_circle" />
+    </LinearLayout>
+
+</LinearLayout>
